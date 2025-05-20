@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blue Drive</title>
+  <link rel="stylesheet" href="./src/css/dashboard.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="side-panel">
+      <button onclick="showPanel('users')">Gérer les utilisateurs</button>
+      <button onclick="showPanel('keys')">Gérer les clés</button>
+      <button onclick="showPanel('settings')">Paramètres</button>
+    </aside>
+
+    <main class="main-panel">
+      <section id="users-panel" class="panel">
+        <h2>Utilisateurs</h2>
+        <div id="users-list">
+          <!-- Exemple de carte utilisateur -->
+          <div class="user-box">
+            <div class="user-info">
+              <div class="status-dot"></div>
+              <div class="name">Nom de l'utilisateur</div>
+              <div class="email">email@exemple.com</div>
+            </div>
+            <div class="user-actions">
+              <button onclick="deleteUser('username', 'email')">Supprimer</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="keys-panel" class="panel hidden">
+        <h2>Clés</h2>
+        <div id="keys-list">
+            <!-- Exemple de carte clé -->
+            <div class="key-box">
+                <div class="key-info">
+                    <p><strong>Key:</strong> key1</p>
+                    <p><strong>Take:</strong> true</p>
+                    <p><strong>Valid:</strong> true</p>
+                    <p><strong>HWID:</strong> hwid123</p>
+                </div>
+                <button onclick="resetHWID('key1')">Reset HWID</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="settings-panel" class="panel hidden">
+      <h2>Générer des clés</h2>
+      <select id="key-duration">
+        <option value="1d">1 Day</option>
+        <option value="3d">3 Days</option>
+        <option value="1w">1 Week</option>
+        <option value="1m">1 Month</option>
+        <option value="lifetime">Lifetime</option>
+      </select>
+      <button onclick="generateKey()">Générer</button>
+    </section>
+  </main>
+</div>
+
+  <script src="./src/js/dashboard.js"></script>
+</body>
+</html>

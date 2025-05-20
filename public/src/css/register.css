@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background-color: #101010;
+    border-radius: 12px;
+    padding: 40px 30px;
+    width: 350px;
+    text-align: center;
+  }
+  
+  .login-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .white {
+    color: #cccccc;
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    background-color: #151515;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+  }
+  
+  input::placeholder {
+    color: #888888;
+  }
+  
+  .create-button {
+    background-color: #4183d7;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-button:hover {
+    background-color: #357ab7;
+  }
+  
+  .container > p:last-of-type {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #aaaaaa;
+  }
+  
+  .container > p:last-of-type span {
+    color: #4183d7;
+    cursor: pointer;
+    margin-left: 5px;
+    text-decoration: underline;
+  }
+  
+  .container > p:last-of-type span:hover {
+    opacity: 0.8;
+  }

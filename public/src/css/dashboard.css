@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #101010;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.side-panel {
+    width: 220px;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    border-right: 1px solid #2a2a2a;
+}
+
+.side-panel button {
+    background-color: #151515;
+    color: #fff;
+    border: none;
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.side-panel button:hover {
+    background-color: #1a1a1a;
+}
+
+.main-panel {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.panel {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+select {
+    background-color: #121212;
+    color: white;
+    border: 1px solid #2a2a2a;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Clé : alignement horizontal */
+.key-box {
+    background-color: #151515;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 6px solid #1e88e5;
+    border-radius: 4px;
+}
+
+/* Affichage horizontal des informations de la clé */
+.key-info {
+    display: flex;
+    gap: 20px; /* Espacement entre les éléments de la clé */
+    flex: 1;
+}
+
+.key-info p {
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.user-box {
+    background-color: #151515;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between; /* Espacement entre les informations et le bouton */
+    align-items: center;
+    border-left: 6px solid #1e88e5;
+    border-radius: 4px;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #e53935;
+    margin-right: 1rem;
+}
+
+/* Utiliser flexbox pour aligner username et email horizontalement */
+.user-info {
+    display: flex;
+    align-items: center; /* Aligner verticalement les éléments */
+}
+
+.info {
+    display: flex;
+    flex-direction: row; /* Aligner les éléments horizontalement */
+}
+
+.info p {
+    margin: 0 10px 0 0; /* Ajouter un espace entre les éléments */
+}
+
+.user-actions {
+    display: flex;
+    justify-content: flex-end; /* Aligner le bouton "Supprimer" à droite */
+}
+
+
+
+button {
+    background-color: #1e88e5;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #1565c0;
+}
