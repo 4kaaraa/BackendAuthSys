@@ -1,21 +1,35 @@
-# BackendAuthSys
-Simple Auth system (Login/Register/Keys/Dashboard)
+<h1 align="center">
+  <br>
+  Backend Auth System
+  <br>
+</h1>
 
-} Status:
-- http://localhost/api/information/status
+<h4 align="center">Javascript Authentificator</h4>
 
-} Support Clé:
-Verification - http://localhost/api/information/key/check?keys= {keys} || http://localhost/api/information/key/check?keys=BLUE-MPEB-DV82-VD1R
-Creation - http://localhost/api/information/key/create
-Take -
-Hwid - 
-Verification - 
+<p align="center">
+  <a href="#overview">Presentation</a>
+  •
+  <a href="#installation">Installation</a>
+  •
+</p>
 
-} Support Account:
-Register - http://localhost/api/information/user/register?username=[username]&password=[password]&keys=[keys]
-Login Username - http://localhost/api/information/user/ulogin?username=[username]&password=[password]
-Delete Account - http://localhost/api/information/user/delete-user?username=[username]
+# Overview
 
-} Api Fetcher:
-Fetch All User - http://localhost/api/information/user/all
-Fetch All Key - http://localhost/api/information/key/all
+I just couldn't buy KeyAuth, so I created a simple system for creating keys and a similar verification system.
+- This system has been developed solely for educational purposes.
+- This project has been created with good intentions and is intended for personal use only.
+- By choosing to use this repo, you acknowledge and accept full responsibility for any consequences that may result from your actions.
+
+![BlueBerry](https://github.com/4kaaraa/BlueBerry/blob/main/image.png)
+
+**Feature**
+- [x] Create License
+- [x] Create User
+- [x] Register
+- [x] Dashboard
+- [x] Api
+- [ ] User Panel
+- [ ] Hwid Checker
+- [ ] Hwid Update
+- [ ] Website [Port: 80]
+- [ ] Auto Update
