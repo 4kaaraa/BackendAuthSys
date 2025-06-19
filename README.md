@@ -7,12 +7,12 @@
 <h4 align="center">Javascript Authentificator</h4>
 
 <p align="center">
+  •
   <a href="#overview">Presentation</a>
   •
   <a href="#Feature">Feature</a>
   •
   <a href="#Documentation">Documentation</a>
-  •
 </p>
 
 # Overview
