@@ -89,7 +89,7 @@ async function generateKey() {
     return key;
 }
 
-async function insertKey(keys) {
+async function insertKey(keys, type) {
     const take = false;
     const hwid = "Aucun";
     const valid = true;
@@ -103,6 +103,7 @@ async function insertKey(keys) {
             keys,
             take,
             hwid,
+            type,
             created: created.toISOString(),
             expired: expired.toISOString(),
             valid
