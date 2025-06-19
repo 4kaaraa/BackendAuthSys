@@ -73,4 +73,16 @@ app.get('/register', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/register.html'));
 });
 
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/login.html'));
+});
+
+app.get('/customer', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/customer.html'));
+});
+
+app.get('/404', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/404.html'));
+});
+
 module.exports = app;
