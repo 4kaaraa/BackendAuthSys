@@ -28,13 +28,14 @@ mongoose.connect(config.mongodb.database)
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-fs.readdirSync("./routes").forEach(fileName => {
-    try {
-        app.use(require(`./routes/${fileName}`));
-    } catch (err) {
-        log.error(`Routes Error: Failed to load ${fileName}`)
-    }
-});
+// Pas besoin pour le moment
+// fs.readdirSync("./routes").forEach(fileName => {
+//     try {
+//         app.use(require(`./routes/${fileName}`));
+//     } catch (err) {
+//         log.error(`Routes Error: Failed to load ${fileName}`)
+//     }
+// });
 
 fs.readdirSync("./Api").forEach(fileName => {
     try {
