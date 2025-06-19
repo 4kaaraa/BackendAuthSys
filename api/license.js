@@ -35,11 +35,15 @@ app.get("/api/information/key/check", async (req, res) => {
 });
 
 app.get("/api/information/key/create", async (req, res) => {
+    const { type } = req.query;
+
+    if (!type) return res.status(400).json({ reponse: "Invalid Request"});
+
     try {
         const generateKey = await functions.generateKey();
 
-        await functions.insertKey(generateKey)
-        log.api(`New keys | ${generateKey}`);
+        await functions.insertKey(generateKey, type)
+        log.api(`New keys / ${generateKey} | Duration / ${type}`);
 
         return res.status(500).json({
             keys: generateKey
@@ -58,6 +62,31 @@ app.get("/api/information/key/all", async (req, res) => {
     } catch (err) {
         console.error('License API Error (get all):', err);
         return res.status(500).json({ response: "Error encountered, check the console" });
+    }
+});
+
+app.get("/api/information/key/edit", async (req, res) => {
+    const { keys, type, take, hwid, valid } = req.query;
+
+    if (!keys) return res.status(400).json({ response: "Key is required" });
+
+    try {
+        const key = await Key.findOne({ keys: keys });
+        if (!key) return res.status(404).json({ response: "Key not found" });
+
+        // Mise à jour des champs si présents dans la requête
+        if (type !== undefined) key.type = type;
+        if (take !== undefined) key.take = take === "true";
+        if (hwid !== undefined) key.hwid = hwid;
+        if (valid !== undefined) key.valid = valid === "false";
+
+        await key.save();
+
+        return res.status(200).json({ response: "Key updated successfully", key });
+
+    } catch (err) {
+        console.error("License API Error (edit key):", err);
+        return res.status(500).json({ response: "Internal server error" });
     }
 });
 
