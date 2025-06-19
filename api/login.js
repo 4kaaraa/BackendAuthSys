@@ -2,7 +2,7 @@ const express = require("express");
 const app = express.Router();
 const User = require("../model/user.js");
 
-app.get("/api/information/user/ulogin", async (req, res) => {
+app.get("/api/information/user/login", async (req, res) => {
     const { username, password } = req.query;
 
     if (!username) return res.status(400).json({response: "Invalide Requests"});
