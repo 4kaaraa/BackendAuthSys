@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetchKeys();   // Charge les clés dès le début
-    fetchUsers();  // Charge les utilisateurs dès le début
+    fetchKeys();
+    fetchUsers();
 
     // Fonction pour changer de panneau
     window.showPanel = function (panelId) {
