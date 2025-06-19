@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Initialisation des données à la première ouverture de la page
-    fetchUsers();  // Charge les utilisateurs dès le début
     fetchKeys();   // Charge les clés dès le début
+    fetchUsers();  // Charge les utilisateurs dès le début
 
     // Fonction pour changer de panneau
     window.showPanel = function (panelId) {
@@ -11,14 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const activePanel = document.getElementById(`${panelId}-panel`);
         if (activePanel) activePanel.classList.remove("hidden");
 
-        if (panelId === "users") fetchUsers();
         if (panelId === "keys") fetchKeys();
+        if (panelId === "users") fetchUsers();
     };
 
     // Fonction pour générer une clé
     window.generateKey = function () {
         const duration = document.getElementById("key-duration").value;
-        fetch(`http://localhost/api/information/key/create`)
+
+        fetch(`http://localhost/api/information/key/create?type=${duration}`)
             .then(res => res.json())
             .then(data => {
                 alert(`Clé générée: ${data.keys || "erreur inconnue"}`);
@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <p><strong>Key:</strong> ${key.keys}</p>
                             <p><strong>Take:</strong> ${key.take}</p>
                             <p><strong>Valid:</strong> ${key.valid}</p>
+                            <p><strong>Type:</strong> ${key.type}</p>
                             <p><strong>HWID:</strong> ${key.hwid}</p>
                             <button onclick="resetHWID('${key.keys}')">Reset HWID</button>
                         `;
