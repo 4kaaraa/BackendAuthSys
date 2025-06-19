@@ -4,7 +4,6 @@ const log = require("../structs/log.js");
 const functions = require("../structs/functions.js");
 const Key = require("../model/keys.js");
 
-//Api for launcher login (If u want a POST requesto just replace "app.get" to "app.post" and "req.query" to "req.body")
 app.get("/api/information/user/register", async (req, res) => {
     const { username, password, keys } = req.query;
 
