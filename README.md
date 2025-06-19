@@ -9,7 +9,9 @@
 <p align="center">
   <a href="#overview">Presentation</a>
   •
-  <a href="#installation">Installation</a>
+  <a href="#Feature">Feature</a>
+  •
+  <a href="#Documentation">Documentation</a>
   •
 </p>
 
@@ -27,10 +29,24 @@ I just couldn't buy KeyAuth, so I created a simple system for creating keys and 
 - [x] Create License
 - [x] Create User
 - [x] Register
+- [x] Login
 - [x] Dashboard
 - [x] Api
-- [ ] User Panel
+- [x] User Panel
 - [ ] Hwid Checker
 - [ ] Hwid Update
 - [ ] Website [Port: 80]
 - [ ] Auto Update
+
+**Documentation**
+Key Check | `/api/information/key/check` (req = keys)
+Key Create | `/api/information/key/create` (req = type)
+Key Edit | `/api/information/key/edit` (req = keys) (fild you want to edit: type, take, hwid, valid)
+All Keys | `/api/information/key/all` (no req)
+
+Register | `/api/information/user/register` (req = username, password, keys)
+Login | `/api/information/user/login` (req = username & password)
+Delete User | `/api/information/user/delete-user` (req = username)
+All User | `/api/information/user/all` (no req)
+
+Status | `/api/information/status` (no req)
