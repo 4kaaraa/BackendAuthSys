@@ -38,15 +38,16 @@ I just couldn't buy KeyAuth, so I created a simple system for creating keys and 
 - [ ] Website [Port: 80]
 - [ ] Auto Update
 
-**Documentation**
-Key Check | `/api/information/key/check` (req = keys)
-Key Create | `/api/information/key/create` (req = type)
-Key Edit | `/api/information/key/edit` (req = keys) (fild you want to edit: type, take, hwid, valid)
-All Keys | `/api/information/key/all` (no req)
+# Documentation
 
-Register | `/api/information/user/register` (req = username, password, keys)
-Login | `/api/information/user/login` (req = username & password)
-Delete User | `/api/information/user/delete-user` (req = username)
-All User | `/api/information/user/all` (no req)
+- Key Check | `/api/information/key/check` (req = keys)
+- Key Create | `/api/information/key/create` (req = type)
+- Key Edit | `/api/information/key/edit` (req = keys) (fild you want to edit: type, take, hwid, valid)
+- All Keys | `/api/information/key/all` (no req)
 
-Status | `/api/information/status` (no req)
+- Register | `/api/information/user/register` (req = username, password, keys)
+- Login | `/api/information/user/login` (req = username & password)
+- Delete User | `/api/information/user/delete-user` (req = username)
+- All User | `/api/information/user/all` (no req)
+
+- Status | `/api/information/status` (no req)
