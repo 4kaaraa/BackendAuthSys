@@ -25,7 +25,7 @@ I just couldn't buy KeyAuth, so I created a simple system for creating keys and 
 - Required:
   [MongoDB](https://www.mongodb.com/try/download/community)
 
-**Feature**
+# Feature
 - [x] Create License
 - [x] Create User
 - [x] Register
