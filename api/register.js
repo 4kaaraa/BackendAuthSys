@@ -20,6 +20,8 @@ app.get("/api/information/user/register", async (req, res) => {
             return res.status(404).json({response: "Key Expired"});
         }
 
+        key.take = take === "true";
+
         await functions.registerUser(username, password, keys);
         log.api(`${username} successfully created an account.`);
 
