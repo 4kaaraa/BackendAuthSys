@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Projet</title>
+  <link rel="stylesheet" href="./src/css/dashboard.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="side-panel">
+      <button onclick="showPanel('information')">Information</button>
+      <button onclick="showPanel('loader')">Loader</button>
+      <button onclick="showPanel('settings')">Paramètres</button>
+    </aside>
+
+    <main class="main-panel">
+      <section id="information-panel" class="panel">
+        <h2>Utilisateurs</h2>
+        <p>Username: </p>
+        <p>Key: </p>
+        <p>Duration: </p>
+      </section>
+
+      <section id="loader-panel" class="panel hidden">
+        <h2>Loader</h2>
+        <button onclick="downloadLoader()">Download</button>
+    </section>
+
+    <section id="settings-panel" class="panel hidden">
+      <h2>Settings</h2>
+    </section>
+  </main>
+</div>
+
+  <script src="./src/js/customer.js"></script>
+</body>
+</html>
