@@ -20,6 +20,9 @@ I just couldn't buy KeyAuth, so I created a simple system for creating keys and 
 - This project has been created with good intentions and is intended for personal use only.
 - By choosing to use this repo, you acknowledge and accept full responsibility for any consequences that may result from your actions.
 
+- Required:
+  [MongoDB](https://www.mongodb.com/try/download/community)
+
 **Feature**
 - [x] Create License
 - [x] Create User
