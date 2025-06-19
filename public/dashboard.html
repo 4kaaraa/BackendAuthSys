@@ -9,13 +9,13 @@
 <body>
   <div class="container">
     <aside class="side-panel">
-      <button onclick="showPanel('users')">Gérer les utilisateurs</button>
       <button onclick="showPanel('keys')">Gérer les clés</button>
+      <button onclick="showPanel('users')">Gérer les utilisateurs</button>
       <button onclick="showPanel('settings')">Paramètres</button>
     </aside>
 
     <main class="main-panel">
-      <section id="users-panel" class="panel">
+      <section id="users-panel" class="panel hidden">
         <h2>Utilisateurs</h2>
         <div id="users-list">
           <!-- Exemple de carte utilisateur -->
@@ -32,7 +32,7 @@
         </div>
       </section>
 
-      <section id="keys-panel" class="panel hidden">
+      <section id="keys-panel" class="panel">
         <h2>Clés</h2>
         <div id="keys-list">
             <!-- Exemple de carte clé -->
@@ -40,6 +40,7 @@
                 <div class="key-info">
                     <p><strong>Key:</strong> key1</p>
                     <p><strong>Take:</strong> true</p>
+                    <p><strong>Type:</strong> day</p>
                     <p><strong>Valid:</strong> true</p>
                     <p><strong>HWID:</strong> hwid123</p>
                 </div>
@@ -51,10 +52,9 @@
     <section id="settings-panel" class="panel hidden">
       <h2>Générer des clés</h2>
       <select id="key-duration">
-        <option value="1d">1 Day</option>
-        <option value="3d">3 Days</option>
-        <option value="1w">1 Week</option>
-        <option value="1m">1 Month</option>
+        <option value="day">1 Day</option>
+        <option value="week">1 Week</option>
+        <option value="month">1 Month</option>
         <option value="lifetime">Lifetime</option>
       </select>
       <button onclick="generateKey()">Générer</button>
